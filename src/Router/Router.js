@@ -6,12 +6,14 @@ import Login from "../components/Login/Login";
 import Root from "../components/Main/Root";
 import Register from "../components/Register/Register";
 import Services from "../components/Services/Services";
+import ErrorPage from '../components/ErrorPage'
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/register",
-        element: <Register></Register>
+        element: <Register></Register>,
       },
 
       {
