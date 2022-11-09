@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+
 
 const Register = () => {
+
+    const { createUser } = useContext(AuthContext);
+
+    const handleSignUp = event =>{
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        createUser(email,password)
+        .then(result =>{
+            const user= result.user;
+            console.log(user)
+        })
+        .catch(error=>{
+            console.error(error)
+        })
+
+    }
     return (
       <div>
         <div className="w-full p-8 rounded-xl grid justify-center mb-2 mt-2">
@@ -11,7 +31,8 @@ const Register = () => {
               <p className="text-sm text-gray-400">Register for new account</p>
             </div>
             <form
-              //   onSubmit={handleSubmit}
+             
+              onSubmit={handleSignUp}
               action=""
               className="space-y-6 ng-untouched ng-pristine ng-valid"
             >
