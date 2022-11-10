@@ -59,31 +59,21 @@ const Orders = () => {
 
     
     return (
-      <div>
-        <h2 className="text-5xl">You have {orders.length} Orders</h2>
-        <div className="overflow-x-auto w-full">
-          <table className="table w-full">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Favorite Color</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {orders.map((order) => (
-                <OrderDetails
+      
+      <div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+        <h2 className="text-xl font-semibold">Your cart</h2>
+        <ul className="flex flex-col divide-y divide-gray-700">
+        {orders.map((order) => (
+               <OrderDetails
                   key={order._id}
                   order={order}
-                  handleDelete={handleDelete}
-                  handleStatusUpdate={handleStatusUpdate}
-                ></OrderDetails>
-              ))}
-            </tbody>
-          </table>
-        </div>
+                   handleDelete={handleDelete}
+                   handleStatusUpdate={handleStatusUpdate}
+              ></OrderDetails>
+            ))}
+        
+        </ul>
+       
       </div>
     );
 };

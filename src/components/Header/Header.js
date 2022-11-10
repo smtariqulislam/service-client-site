@@ -14,18 +14,29 @@ const Header = () => {
     <>
       {user?.email ? (
         <>
-          <li className="font-semibold bg-white">
-            <Link to="/orders">Orders</Link>
+          <li className="font-semibold">
+            <Link
+              className="px-8 py-3 font-semibold rounded bg-gray-100 text-gray-800"
+              to="/orders"
+            >
+              Orders
+            </Link>
           </li>
-          <li className="font-semibold bg-white">
-            <button onClick={handleLogOut} className="btn-ghost">
+          <li className="font-semibold">
+            <button onClick={handleLogOut}  className="px-8 py-3 font-semibold rounded bg-gray-100 text-gray-800">
               logOut
             </button>
+            
           </li>
         </>
       ) : (
-        <li className="font-semibold bg-white">
-          <Link to="/login">Login</Link>
+        <li className="font-semibold">
+          <Link
+            className="px-8 py-3 font-semibold rounded bg-gray-100 text-gray-800"
+            to="/login"
+          >
+            Login
+          </Link>
         </li>
       )}
     </>

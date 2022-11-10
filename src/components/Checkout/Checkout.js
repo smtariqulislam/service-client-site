@@ -51,7 +51,6 @@ const Checkout = () => {
 
     // console.log(serviceName);
     return (
-     
       <form
         onSubmit={handlePlaceOrder}
         className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid p-10"
@@ -133,11 +132,15 @@ const Checkout = () => {
             </div>
             <div className="col-span-full">
               <div className="flex items-center space-x-2">
-                <input
-                  className="px-4 py-2 border rounded-md border-red-700"
-                  type="submit"
-                  value="Place Your Order"
-                />
+                {/* <Link> */}
+                  <input
+                    className="px-4 py-2 border rounded-md
+                    hover:bg-cyan-900 
+                    border-red-700"
+                    type="submit"
+                    value="Place Your Order"
+                  />
+                {/* </Link> */}
               </div>
             </div>
           </div>
