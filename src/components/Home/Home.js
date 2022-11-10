@@ -11,42 +11,43 @@ const Home = () => {
             <div className="flex flex-col justify-center">
               <div className="max-w-xl mb-6">
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                  The quick, brown fox
+                  All great leaders choose great advisors, people they really
+                  trust for their governance.
                   <br className="hidden md:block" />
-                  jumps over{" "}
+                  <br className="hidden md:block" />
+                  <h1 className="text-violet-700">
+                    {" "}
+                    Meet Advisor S M Tariqul Islam.
+                  </h1>
                   <span className="relative px-1">
                     <div className="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400" />
-                    <span className="relative inline-block text-deep-purple-accent-400">
-                      a lazy dog
-                    </span>
+                    <span className="relative inline-block text-deep-purple-accent-400"></span>
                   </span>
                 </h2>
                 <p className="text-base text-gray-700 md:text-lg">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae. explicabo.
+                  The best help you can get is someone who genuinely cares and
+                  knows how to help you get what you don't even know you want
                 </p>
               </div>
               <div className="grid gap-5 row-gap-8 sm:grid-cols-2">
                 <div className="bg-white border-l-4 shadow-sm border-deep-purple-accent-400">
                   <div className="h-full p-5 border border-l-0 rounded-r">
-                    <h6 className="mb-2 font-semibold leading-5">
-                      I'll be sure to note that in my log
-                    </h6>
+                    <h6 className="mb-2 font-semibold leading-5">Counseling</h6>
                     <p className="text-sm text-gray-900">
-                      Lookout flogging bilge rat main sheet bilge water nipper
-                      fluke to go on account heave down.
+                      Advising and counseling is available to assist students
+                      with course selection, education and career planning as
+                      well as supporting students as they strengthen their
+                      college success and life skills.
                     </p>
                   </div>
                 </div>
                 <div className="bg-white border-l-4 shadow-sm border-deep-purple-accent-400">
                   <div className="h-full p-5 border border-l-0 rounded-r">
                     <h6 className="mb-2 font-semibold leading-5">
-                      A business big enough that it could be listed
+                    Academic Advising
                     </h6>
                     <p className="text-sm text-gray-900">
-                      Those options are already baked in with this model shoot
-                      me an email clear.
+                     Advisors are available to meet with students to provide support on topics like career and academic planning, transitioning to a university, and how to enhance college success skills.
                     </p>
                   </div>
                 </div>
