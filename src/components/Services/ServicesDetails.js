@@ -17,11 +17,13 @@ const ServicesDetails = ({service}) => {
           <h1 className=" font-bold text-blue-600 ">Rating: {rating}</h1>
           <h1 className=" font-bold text-blue-600 ">Price: ${price}</h1>
           <h1 className=" font-bold text-blue-600 ">
-            <span className='text-black'>Description:</span>
+            <span className="text-black">Description:</span>
             {description.length > 100 ? (
               <p>
                 {description.slice(0, 100) + "..."}{" "}
-                <Link to={`/services/${_id}`}>Read More</Link>
+                <Link to={`/services/${_id}`} className="text-black">
+                  Read More
+                </Link>
               </p>
             ) : (
               <p>{description}</p>
