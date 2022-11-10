@@ -9,6 +9,7 @@ import Services from "../components/Services/Services";
 import ErrorPage from '../components/ErrorPage'
 import SingleServices from "../components/Services/SingleServices";
 import Checkout from "../components/Checkout/Checkout";
+import Orders from "../components/Orders/Orders";
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,11 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:4000/services/${params.id}`),
         element: <Checkout></Checkout>
+      },
+      {
+        path:"/orders",
+        element:<Orders></Orders>
+
       },
 
       {

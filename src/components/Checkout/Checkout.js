@@ -37,9 +37,10 @@ const Checkout = () => {
         .then(data =>{
             console.log(data)
             if(data.acknowledged){
-                form.rest();
+               
 
                 alert('successfull')
+                  form.reset();
 
             }
         })
