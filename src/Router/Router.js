@@ -13,6 +13,7 @@ import Orders from "../components/Orders/Orders";
 import Faq from "../components/Faq/Faq";
 import Blog from "../components/Blog/Blog";
 import About from "../About/About";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -53,7 +54,11 @@ const router = createBrowserRouter([
         path: "/services/:id/checkout",
         loader: ({ params }) =>
           fetch(`http://localhost:4000/services/${params.id}`),
-        element: <Checkout></Checkout>,
+        element: (
+          <PrivateRoute>
+            <Checkout></Checkout>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/orders",
@@ -69,7 +74,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About></About>
+        element: <About></About>,
       },
 
       {
