@@ -36,7 +36,7 @@ const Orders = () => {
 
 
       const handleStatusUpdate = (id) => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`http://localhost:4000/orders/${id}`, {
           method: "PATCH",
           headers: {
             "content-type": "application/json",

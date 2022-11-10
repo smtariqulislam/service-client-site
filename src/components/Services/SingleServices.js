@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import Review from '../Review/Review';
 
 const SingleServices = () => {
     const services = useLoaderData();
@@ -8,7 +9,7 @@ const SingleServices = () => {
 
     console.log(services);
     return (
-      <div className="bg-gray-800 text-gray-50">
+      <div className="bg-gray-800 text-gray-50 p-10">
         <div className="container grid grid-cols-12 mx-auto bg-gray-900">
         
           <div className="bg-no-repeat bg-cover bg-gray-700 col-span-full lg:col-span-4">
@@ -44,6 +45,9 @@ const SingleServices = () => {
             </div>
           </div>
         </div>
+
+        <Review
+        _id={_id}></Review>
       </div>
       
     );
