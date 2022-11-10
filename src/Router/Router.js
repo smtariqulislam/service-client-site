@@ -32,14 +32,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        loader: () => fetch(`http://localhost:4000/services`),
+        loader: () => fetch(`https://service-sever-site.vercel.app/services`),
         element: <Services></Services>,
       },
 
       {
         path: "/services/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/services/${params.id}`),
+          fetch(`https://service-sever-site.vercel.app/services/${params.id}`),
         element: <SingleServices></SingleServices>,
       },
       {
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
       {
         path: "/services/:id/checkout",
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/services/${params.id}`),
+          fetch(`https://service-sever-site.vercel.app/services/${params.id}`),
         element: (
           <PrivateRoute>
             <Checkout></Checkout>
