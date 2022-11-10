@@ -8,6 +8,7 @@ import Register from "../components/Register/Register";
 import Services from "../components/Services/Services";
 import ErrorPage from '../components/ErrorPage'
 import SingleServices from "../components/Services/SingleServices";
+import Checkout from "../components/Checkout/Checkout";
 
 
 const router = createBrowserRouter([
@@ -26,8 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-         loader: () =>
-          fetch(`http://localhost:4000/services`),
+        loader: () => fetch(`http://localhost:4000/services`),
         element: <Services></Services>,
       },
 
@@ -44,6 +44,12 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/services/:id/checkout",
+        loader: ({ params }) =>
+          fetch(`http://localhost:4000/services/${params.id}`),
+        element: <Checkout></Checkout>
       },
 
       {

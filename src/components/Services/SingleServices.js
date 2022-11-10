@@ -4,7 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 const SingleServices = () => {
     const services = useLoaderData();
 
-    const {  description, } = services;
+    const { _id, description, } = services;
 
     console.log(services);
     return (
@@ -33,7 +33,7 @@ const SingleServices = () => {
             <div className="flex items-center justify-between pt-2">
               <div className="flex space-x-2">
                 <Link
-                //  to={`/services/${_id}`}
+                 to={`/services/${_id}/checkout`}
                 >
                   <button className="px-8 block w-full mt-4 py-3 font-semibold rounded-full bg-violet-200 text-gray-800 hover:bg-cyan-400">
                     Cheackout
