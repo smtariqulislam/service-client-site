@@ -14,19 +14,22 @@ const ServicesDetails = ({service}) => {
           <p className="mb-2 text-xl font-bold leading-none sm:text-2xl">
             {services_name}
           </p>
-          <h1 className=" font-bold text-blue-600 text-center">
-            Question: {rating}
-          </h1>
-          <h1 className=" font-bold text-blue-600 text-center">
-            Question: {price}
-          </h1>
-          <h1 className=" font-bold text-blue-600 text-center">
-            Question: {description}
+          <h1 className=" font-bold text-blue-600 ">Rating: {rating}</h1>
+          <h1 className=" font-bold text-blue-600 ">Price: ${price}</h1>
+          <h1 className=" font-bold text-blue-600 ">
+            <span className='text-black'>Description:</span>
+            {description.length > 100 ? (
+              <p>
+                {description.slice(0, 100) + "..."}{" "}
+                <Link to={`/services/${_id}`}>Read More</Link>
+              </p>
+            ) : (
+              <p>{description}</p>
+            )}
           </h1>
           <p>
             <Link to={`/services/${_id}`}>
               <button className="px-8 block w-full mt-4 py-3 font-semibold rounded-full bg-cyan-200 text-gray-800 hover:bg-cyan-400">
-               
                 Details
               </button>
             </Link>
