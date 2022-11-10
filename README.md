@@ -7,4 +7,6 @@
 4.router setup header components 
 6.login and register page
 5.errorpage
+6.login and register implement.
+7.singleservices pages 
 

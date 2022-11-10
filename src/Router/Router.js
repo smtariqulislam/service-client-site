@@ -7,6 +7,7 @@ import Root from "../components/Main/Root";
 import Register from "../components/Register/Register";
 import Services from "../components/Services/Services";
 import ErrorPage from '../components/ErrorPage'
+import SingleServices from "../components/Services/SingleServices";
 
 
 const router = createBrowserRouter([
@@ -25,7 +26,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
+         loader: () =>
+          fetch(`http://localhost:4000/services`),
         element: <Services></Services>,
+      },
+
+      {
+        path: "/services/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:4000/services/${params.id}`),
+        element: <SingleServices></SingleServices>,
       },
       {
         path: "/login",

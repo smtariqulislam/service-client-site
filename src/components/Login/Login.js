@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
+
+    const {login}= useContext(AuthContext);
+    const handlelogin = event =>{
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        login(email,password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error =>{
+            console.error(error)
+        })
+
+    }
+
+
     return (
       <div className="grid justify-center mb-2 mt-2">
         <div className="grid justify-center max-w-md p-6 rounded-md sm:p-10 bg-gray-900 text-gray-100">
@@ -12,7 +33,7 @@ const Login = () => {
             </p>
           </div>
           <form
-            // onSubmit={handleSubmit}
+            onSubmit={handlelogin}
             className="space-y-12 ng-untouched ng-pristine ng-valid"
           >
             <div className="space-y-4">
@@ -63,7 +84,7 @@ const Login = () => {
                 >
                   Register
                 </Link>
-                .
+                
               </p>
             </div>
           </form>

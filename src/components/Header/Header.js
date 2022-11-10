@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/favicon.png'
+import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
 const Header = () => {
+  const {logOut} = useContext(AuthContext)
+  const handleLogout = () => {
+    logOut()
+    .then()
+    .catch()
+  };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="bg-gray-900">
