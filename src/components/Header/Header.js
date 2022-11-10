@@ -4,12 +4,35 @@ import logo from '../../assets/favicon.png'
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
 const Header = () => {
-  const {logOut} = useContext(AuthContext)
-  const handleLogout = () => {
-    logOut()
-    .then()
-    .catch()
+  const {user,logOut} = useContext(AuthContext)
+  const handleLogOut = () => {
+    logOut().then().catch();
   };
+
+
+  const loginOrlogout = (
+    <>
+      {user?.email ? (
+        <>
+          <li className="font-semibold bg-white">
+            <Link to="/orders">Orders</Link>
+          </li>
+          <li className="font-semibold bg-white">
+            <button onClick={handleLogOut} className="btn-ghost">
+              logOut
+            </button>
+          </li>
+        </>
+      ) : (
+        <li className="font-semibold bg-white">
+          <Link to="/login">Login</Link>
+        </li>
+      )}
+    </>
+  );
+
+
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="bg-gray-900">
@@ -86,18 +109,19 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/blog"
-                aria-label="Blog"
-                title="Blog"
+                to="/faq"
+                aria-label="Faq"
+                title="Faq"
                 className={({ isActive }) =>
                   isActive
                     ? "font-medium tracking-wide text-pink-900 transition-colors duration-200 hover:text-deep-purple-accent-400"
                     : "font-medium tracking-wide text-pink-100 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 }
               >
-                something
+                Faq
               </NavLink>
             </li>
+            {loginOrlogout}
           </ul>
           <div className="lg:hidden">
             <button
@@ -212,6 +236,21 @@ const Header = () => {
                           Blog
                         </NavLink>
                       </li>
+                      <li>
+                        <NavLink
+                          to="/faq"
+                          aria-label="Faq"
+                          title="Faq"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium tracking-wide text-pink-900 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                              : "font-medium tracking-wide text-pink-100 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          }
+                        >
+                          Faq
+                        </NavLink>
+                      </li>
+                      {loginOrlogout}
                     </ul>
                   </nav>
                 </div>
