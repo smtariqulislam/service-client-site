@@ -5,7 +5,7 @@ const OrderDetails = ({ order, handleDelete, handleStatusUpdate }) => {
     const [orderService, setOrderService] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${service}`)
+        fetch(`http://localhost:4000/services/${service}`)
             .then(res => res.json())
             .then(data => setOrderService(data));
     }, [service])

@@ -9,4 +9,6 @@
 5.errorpage
 6.login and register implement.
 7.singleservices pages 
+8.oder delete update work.
+9.about faq blog create 
 
