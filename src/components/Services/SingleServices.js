@@ -11,7 +11,6 @@ const SingleServices = () => {
     return (
       <div className="bg-gray-800 text-gray-50 p-10">
         <div className="container grid grid-cols-12 mx-auto bg-gray-900">
-        
           <div className="bg-no-repeat bg-cover bg-gray-700 col-span-full lg:col-span-4">
             <img src={services.img} alt="" />
           </div>
@@ -24,32 +23,27 @@ const SingleServices = () => {
             </div>
             <h1 className="text-3xl font-semibold">{services.services_name}</h1>
 
-            <p className="flex-1 p-5">
-            {description}
-            </p>
+            <p className="flex-1 p-5">{description}</p>
             <div className="flex items-center justify-between pt-2">
               <span className="text-xl">Price: ${services.price}</span>
               <span className="text-xl">Rating: {services.rating}</span>
             </div>
             <div className="flex items-center justify-between pt-2">
               <div className="flex space-x-2">
-                <Link
-                 to={`/services/${_id}/checkout`}
-                >
+                <Link to={`/services/${_id}/checkout`}>
                   <button className="px-8 block w-full mt-4 py-3 font-semibold rounded-full bg-violet-200 text-gray-800 hover:bg-cyan-400">
                     Cheackout
                   </button>
                 </Link>
               </div>
-            
             </div>
           </div>
         </div>
 
-        <Review
-        _id={_id}></Review>
+        <div className="m-10">
+          <Review _id={_id}></Review>
+        </div>
       </div>
-      
     );
 };
 

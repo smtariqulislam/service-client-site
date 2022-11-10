@@ -22,7 +22,7 @@ const Review = ({_id}) => {
           <ReviewDetails key={r._id} r={r}></ReviewDetails>
         ))}
         <Link to={`/services/${_id}/checkout`}>
-          <button className="px-8 block w-full mt-4 py-3 font-semibold rounded-full bg-violet-200 text-gray-800 hover:bg-cyan-400">
+          <button className="px-8 block mt-4 py-3 font-semibold rounded-full bg-gray-800 text-gray-200 hover:bg-violet-400">
             Add Review
           </button>
         </Link>
