@@ -13,8 +13,8 @@ const Home = () => {
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
                   All great leaders choose great advisors, people they really
                   trust for their governance.
-                  <br className="hidden md:block" />
-                  <br className="hidden md:block" />
+                  <br  />
+                  <br  />
                   <h1 className="text-violet-700">
                     {" "}
                     Meet Advisor S M Tariqul Islam.
