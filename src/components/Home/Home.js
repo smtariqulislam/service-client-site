@@ -1,5 +1,6 @@
 import React from 'react';
 import Services from '../Services/Services';
+import Faq from '../Faq/Faq'
 
 import picture from '../../assets/picture3.jpg'
 
@@ -64,6 +65,8 @@ const Home = () => {
         </div>
 
         <Services></Services>
+
+        <Faq></Faq>
       </div>
     );
 };
