@@ -1,6 +1,5 @@
 
 How to work:
-
 # 1. create react app
 # 2. git 
 # 3.tailwind setup and title logo add
@@ -17,7 +16,8 @@ How to work:
 
 function:
 # 1. login and logout 
-# 2. you can add review
-# 3. see review every item
-# 4. faq seciton.
+# 2. add service 
+# 3. you can add review
+# 4. see review every item
+# 5. faq seciton.
 
