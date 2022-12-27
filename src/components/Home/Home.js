@@ -12,10 +12,9 @@ const Home = () => {
             <div className="flex flex-col justify-center">
               <div className="max-w-xl mb-6">
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                  All great leaders choose great advisors, people they really
-                  trust for their governance.
-                  <br  />
-                  <br  />
+                  We cordially invite you to Person Advisor. 
+                  <br />
+                  <br />
                   <h1 className="text-violet-700">
                     {" "}
                     Meet Advisor S M Tariqul Islam.
@@ -45,10 +44,13 @@ const Home = () => {
                 <div className="bg-white border-l-4 shadow-sm border-deep-purple-accent-400">
                   <div className="h-full p-5 border border-l-0 rounded-r">
                     <h6 className="mb-2 font-semibold leading-5">
-                    Academic Advising
+                      Academic Advising
                     </h6>
                     <p className="text-sm text-gray-900">
-                     Advisors are available to meet with students to provide support on topics like career and academic planning, transitioning to a university, and how to enhance college success skills.
+                      Advisors are available to meet with students to provide
+                      support on topics like career and academic planning,
+                      transitioning to a university, and how to enhance college
+                      success skills.
                     </p>
                   </div>
                 </div>
