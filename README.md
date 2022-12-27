@@ -16,8 +16,9 @@ How to work:
 
 function:
 # 1. login and logout 
-# 2. add service 
+# 2. services details (fix )
 # 3. you can add review
-# 4. see review every item
+# 4. see review all user if they add.
 # 5. faq seciton.
+# 6. footer section.
 
