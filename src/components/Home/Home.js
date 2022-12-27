@@ -15,7 +15,7 @@ const Home = () => {
                   We cordially invite you to Person Advisor. 
                   <br />
                   <br />
-                  <h1 className="text-violet-700">
+                  <h1 className="text-green-700">
                     {" "}
                     Meet Advisor S M Tariqul Islam.
                   </h1>

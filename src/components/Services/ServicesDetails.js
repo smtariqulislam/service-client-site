@@ -31,7 +31,7 @@ const ServicesDetails = ({service}) => {
           </h1>
           <p>
             <Link to={`/services/${_id}`}>
-              <button className="px-8 block w-full mt-4 py-3 font-semibold rounded-full bg-cyan-200 text-gray-800 hover:bg-cyan-400">
+              <button className="px-8 block w-full mt-4 py-3 font-semibold rounded-full bg-green-900 text-gray-100 hover:bg-green-700">
                 Details
               </button>
             </Link>
