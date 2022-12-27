@@ -1,11 +1,11 @@
 
 function:
-# 1. login and logout 
-# 2. services details (fix )
-# 3. you can add review
-# 4. see review all user if they add.
-# 5. faq seciton.
-# 6. footer section.
+## 1. login and logout 
+## 2. services details (fix )
+## 3. you can add review
+## 4. see review all user if they add.
+## 5. faq seciton.
+## 6. footer section.
 
 
 How to work:
